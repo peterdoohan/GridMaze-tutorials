@@ -4,6 +4,7 @@
 ### Note: you'll need to have access to ceph (SWC cluster) for these notebooks to run
 
 ### Before the tutorial
+- SSH into the SWC cluster
 - Copy this folder to your working directory or navigate to:
     ```
     cd /ceph/behrens/peter_doohan/tutorials
@@ -13,6 +14,15 @@
 
     ```
     conda env create -f environment.yml --name GridMaze_tutorial
+
+    conda activate GridMaze_tutorial
+    ```
+
+- Get some cluster resources and spin up a jupyter server (optional)
+    ```
+    srun --nodes=1 --ntasks-per-node=1 --cpus-per-task=8  --time=4:00:00 --mem=32G --pty bash -i
+    jupyter-notebook --no-browser --ip=0.0.0.0 --port 8888
+    # link notebook to this server
     ```
 
 ### Overview
