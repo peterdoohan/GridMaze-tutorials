@@ -12,7 +12,7 @@
 - Make a new conda envionment from the requirements.txt in this repo:
 
     ```
-    conda create --name GridMaze_tutorial python=3.12.2 --file requirements.txt
+    conda env create -f environment.yml --name GridMaze_tutorial
     ```
 
 ### Overview
